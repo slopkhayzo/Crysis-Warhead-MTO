@@ -3,11 +3,11 @@
 > [!WARNING]
 > This mod has been pretty much entirely generated using AI;
 > I won't and will never claim to have enough knowledge or expertise to do this
-> kind of reverse-engineering by myself; I've played the start of the first mission
-> with it and so far spotted no major issues (on my machine ofc, if you have issues
-> feel free to open an Issue).
-> It has been tested with the Steam and GOG versions of the game so far, so no
-> guarantees for the other ones for now.
+> kind of reverse-engineering by myself; I've played very briefly and so far spotted no major issues (on my machine ofc, if you
+> have issues feel free to open an Issue).
+> I've only tested it with the GOG version of the game so far (1.1.1.711 (gog-5)) and Steam, so no
+> guarantees for other exes for now.
+> If you're interested and want more (human generated) info, I have a blog post [here](https://slop-blog.enkhayzomachines.net/posts/crysis-warhead-multithreaded-overhaul) :)
 
 A CPU-multithreading mod for Crysis Warhead (2008), ported from Crysis MTO, the same mod for the first Crysis. The game runs its simulation, its scene traversal and every Direct3D call on one thread. This mod moves the renderer's work onto a thread of its own, spreads two of the main thread's jobs (the particle emitters' update and the characters' animation) over worker threads, and fixes two engine defects that cost frame rate. It ships as an ASI plugin, `optiperf.asi`, loaded by [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader); no game file is modified.
 
