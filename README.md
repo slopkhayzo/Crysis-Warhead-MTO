@@ -3,7 +3,7 @@
 > [!WARNING]
 > This mod has been pretty much entirely generated using AI;
 > I won't and will never claim to have enough knowledge or expertise to do this
-> kind of reverse-engineering by myself; I've played very briefly and so far spotted no major issues (on my machine ofc, if you
+> kind of reverse-engineering by myself; I've played the first two levels and so far spotted no major issues (on my machine ofc, if you
 > have issues feel free to open an Issue).
 > I've only tested it with the GOG version of the game so far (1.1.1.711 (gog-5)) and Steam, so no
 > guarantees for other exes for now.
