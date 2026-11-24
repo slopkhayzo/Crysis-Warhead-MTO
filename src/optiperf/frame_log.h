@@ -7,6 +7,15 @@
 // 1 % and 0.1 % lows, the longest, and the share of the time below 100 and 60 fps.
 //
 // [Debug] FrameLog = off (default) | on   (env OPTIPERF_FRAME_LOG)
+//
+// Two diagnostics with it (x64; not in the shipped optiperf.ini):
+// - The renderer's own log for a few frames, to compare its passes between modes. [Debug] RLogAt = <counted frame>
+//   (env OPTIPERF_RLOG_AT): "r_Log <level>" through the console at that frame's start, then "r_Log 0" RLogFrames
+//   (OPTIPERF_RLOG_FRAMES, default 2) frames later; RLogLevel (OPTIPERF_RLOG_LEVEL) 1-4 (default 4: every pass, state
+//   and shader). The renderer opens and closes Direct3DLog.txt, in the game's folder, at its BeginFrames between.
+// - [Debug] PostWatch = <text> (env OPTIPERF_POST_WATCH): the 3D engine's SetPostEffectParam calls for a parameter
+//   whose name contains the text are logged (frame, thread, whether a flush ran beside the main thread, caller).
+//   CryVision's parameters are read at each frame's start and logged when they change.
 
 #include <cstddef>
 
